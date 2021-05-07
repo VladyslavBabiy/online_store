@@ -1,0 +1,40 @@
+package ua.babiy.online_store.entity;
+
+import lombok.*;
+
+import javax.persistence.*;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+@ToString
+@Getter
+@Setter
+
+@Entity
+@Table(name="carts")
+public class Cart {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id", insertable = false, updatable = false, nullable = false)
+    private Long id;
+
+//    @JoinColumn(name = "product_id")
+//    @OneToMany(fetch = FetchType.EAGER)
+//    private Set<Product> products;
+
+    @Transient
+    private Map<ua.hubanov.onlinestore_springboot.entity.Product, Integer> productsWithQuantity = new HashMap<>();
+
+    @JoinColumn(name = "order_id")
+    @OneToMany(fetch = FetchType.EAGER)
+    private Set<ua.hubanov.onlinestore_springboot.entity.Order> orders;
+
+//    @JoinColumn(name="user_id")
+//    @OneToOne(fetch = FetchType.EAGER)
+//    private User user;
+
+}
