@@ -1,10 +1,10 @@
-package ua.babiy.online_store.impl;
+package ua.babiy.online_store.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-import ua.babiy.online_store.ProductService;
+import ua.babiy.online_store.service.ProductService;
 import ua.babiy.online_store.entity.Category;
 import ua.babiy.online_store.entity.Product;
 import ua.babiy.online_store.repository.CategoryRepository;

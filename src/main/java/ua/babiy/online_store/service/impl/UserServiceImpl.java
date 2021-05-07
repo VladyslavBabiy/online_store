@@ -1,4 +1,4 @@
-package ua.babiy.online_store.impl;
+package ua.babiy.online_store.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -6,7 +6,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
-import ua.babiy.online_store.UserService;
+import ua.babiy.online_store.service.UserService;
 import ua.babiy.online_store.entity.Cart;
 import ua.babiy.online_store.entity.User;
 import ua.babiy.online_store.repository.UserRepository;

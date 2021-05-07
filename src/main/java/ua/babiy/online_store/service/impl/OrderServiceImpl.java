@@ -1,10 +1,10 @@
-package ua.babiy.online_store.impl;
+package ua.babiy.online_store.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import ua.babiy.online_store.CartService;
-import ua.babiy.online_store.OrderService;
-import ua.babiy.online_store.ProductService;
+import ua.babiy.online_store.service.CartService;
+import ua.babiy.online_store.service.OrderService;
+import ua.babiy.online_store.service.ProductService;
 import ua.babiy.online_store.entity.Order;
 import ua.babiy.online_store.entity.OrderedProduct;
 import ua.babiy.online_store.entity.Product;

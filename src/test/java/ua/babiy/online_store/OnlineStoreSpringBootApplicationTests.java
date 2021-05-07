@@ -9,7 +9,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import ua.babiy.online_store.entity.Category;
 import ua.babiy.online_store.entity.Product;
-import ua.babiy.online_store.impl.ProductServiceImpl;
+import ua.babiy.online_store.service.impl.ProductServiceImpl;
 import ua.babiy.online_store.repository.ProductRepository;
 
 import java.math.BigDecimal;
