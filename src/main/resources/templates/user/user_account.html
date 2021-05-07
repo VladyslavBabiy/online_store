@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .center {
+            width: 400px; /* Ширина элемента в пикселах */
+            padding: top 20px;/*20px; /* Поля вокруг текста */
+            margin: auto; /* Выравниваем по центру */
+            /* Цвет фона */
+        }
+    </style>
+</head>
+<body>
+
+<header th:insert="_blocks/header :: header"></header>
+
+<div class="center">
+
+    <div class="center" style="margin-top:22px">
+        <div class="col-xs-12 col-sm-12 col-md-8 col-sm-offset-2 col-md-offset-3">
+            <form th:method="POST" th:action="@{/user/account/{userId}(userId=${user.id})}" th:object="${user}">
+                <fieldset class="center">
+                    <h3 align="center" th:text="#{userAccountPage.title1} + ${user.email} + '!'">Hello, world!</h3>
+                    <h4 align="center" th:text="#{userAccountPage.title2}">Update Your Info</h4>
+                    <div>
+                        <label for="firstName" th:text="#{registrationPage.label.firstName}">First Name: </label>
+                        <input type="text" class="form-control" th:field="*{firstName}" id="firstName" th:placeholder="#{registrationPage.label.firstName}">
+                        <p class="text-danger" th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}"></p>
+                    </div>
+                    <div>
+                        <label for="lastName" th:text="#{registrationPage.label.lastName}">Last Name: </label>
+                        <input type="text" class="form-control" th:field="*{lastName}" id="lastName" th:placeholder="#{registrationPage.label.lastName}">
+                        <p class="text-danger" th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}"></p>
+                    </div>
+                    <div>
+                        <label for="password" th:text="#{registrationPage.label.password}">Password</label>
+                        <input type="password" class="form-control" th:field="*{password}" id="password" th:placeholder="#{registrationPage.label.password}">
+                        <p class="text-danger" th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></p>
+                    </div>
+
+                    <div style="margin-top: 16px">
+                        <div> <!--class="col-xs-6 col-sm-6 col-md-6"-->
+                            <input type="submit" class="btn btn-lg btn-success btn-block" th:value="#{editProductPage.button.submit}"/>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+<header th:insert="_blocks/footer :: footer"></header>
+</body>
+</html>
