@@ -1,4 +1,4 @@
-package ua.babiy.online_store.service;
+package ua.babiy.online_store;
 
 
 import ua.babiy.online_store.entity.Product;

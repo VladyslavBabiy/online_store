@@ -1,4 +1,4 @@
-package ua.babiy.online_store.service;
+package ua.babiy.online_store;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

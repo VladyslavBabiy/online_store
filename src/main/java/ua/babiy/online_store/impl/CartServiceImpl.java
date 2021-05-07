@@ -1,4 +1,4 @@
-package ua.babiy.online_store.service.impl;
+package ua.babiy.online_store.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -10,8 +10,8 @@ import ua.babiy.online_store.entity.User;
 import ua.babiy.online_store.repository.CartRepository;
 import ua.babiy.online_store.repository.InCartProductRepository;
 import ua.babiy.online_store.repository.ProductRepository;
-import ua.babiy.online_store.service.CartService;
-import ua.babiy.online_store.service.ProductService;
+import ua.babiy.online_store.CartService;
+import ua.babiy.online_store.ProductService;
 
 import java.math.BigDecimal;
 import java.util.Map;
