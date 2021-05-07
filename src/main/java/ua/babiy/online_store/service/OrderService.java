@@ -5,6 +5,7 @@ package ua.babiy.online_store.service;
 import ua.babiy.online_store.entity.Order;
 import ua.babiy.online_store.entity.OrderedProduct;
 import ua.babiy.online_store.entity.User;
+import ua.babiy.online_store.exceptions.StockIsNotEnoughException;
 
 import java.math.BigDecimal;
 import java.util.List;

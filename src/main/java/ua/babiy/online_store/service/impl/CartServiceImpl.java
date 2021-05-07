@@ -7,6 +7,7 @@ import ua.babiy.online_store.entity.Cart;
 import ua.babiy.online_store.entity.InCartProduct;
 import ua.babiy.online_store.entity.Product;
 import ua.babiy.online_store.entity.User;
+import ua.babiy.online_store.exceptions.StockIsNotEnoughException;
 import ua.babiy.online_store.repository.CartRepository;
 import ua.babiy.online_store.repository.InCartProductRepository;
 import ua.babiy.online_store.repository.ProductRepository;

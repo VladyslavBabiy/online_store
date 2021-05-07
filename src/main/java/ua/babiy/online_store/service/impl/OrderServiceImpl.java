@@ -2,6 +2,7 @@ package ua.babiy.online_store.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import ua.babiy.online_store.exceptions.StockIsNotEnoughException;
 import ua.babiy.online_store.service.CartService;
 import ua.babiy.online_store.service.OrderService;
 import ua.babiy.online_store.service.ProductService;
