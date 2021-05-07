@@ -51,7 +51,7 @@ public class User implements UserDetails {
     @Enumerated(EnumType.STRING)
     @Builder.Default
 //    private List<UserRole> role = new ArrayList<UserRole>(Collections.singleton(UserRole.USER));
-    private ua.hubanov.onlinestore_springboot.entity.UserRole role = ua.hubanov.onlinestore_springboot.entity.UserRole.USER;
+    private UserRole role = UserRole.USER;
 
     @Column(name = "isNonLocked")
     @Builder.Default
@@ -59,13 +59,13 @@ public class User implements UserDetails {
 
     @OneToOne(optional = false, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn(name = "cart_id")
-    private ua.hubanov.onlinestore_springboot.entity.Cart cart;
+    private Cart cart;
 
-    public ua.hubanov.onlinestore_springboot.entity.Cart getCart() {
+    public Cart getCart() {
         return cart;
     }
 
-    public void setCart(ua.hubanov.onlinestore_springboot.entity.Cart cart) {
+    public void setCart(Cart cart) {
         this.cart = cart;
     }
 
@@ -109,19 +109,19 @@ public class User implements UserDetails {
         this.password = password;
     }
 
-    public ua.hubanov.onlinestore_springboot.entity.UserRole getRole() {
+    public UserRole getRole() {
         return role;
     }
 
 
     // ToDo
-    public void setRole(ua.hubanov.onlinestore_springboot.entity.UserRole role) {
+    public void setRole(UserRole role) {
         this.role = role;
     }
 
     // Todo
     @Override
-    public List<ua.hubanov.onlinestore_springboot.entity.UserRole> getAuthorities() {
+    public List<UserRole> getAuthorities() {
         return new ArrayList<>(Collections.singleton(role));
     }
 

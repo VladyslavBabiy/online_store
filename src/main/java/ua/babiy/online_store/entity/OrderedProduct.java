@@ -50,6 +50,6 @@ public class OrderedProduct {
 
     @ManyToOne
     @JoinColumn(name="order_id")
-    private ua.hubanov.onlinestore_springboot.entity.Order order;
+    private Order order;
 
 }

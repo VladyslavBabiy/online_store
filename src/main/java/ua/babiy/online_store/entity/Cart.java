@@ -27,11 +27,11 @@ public class Cart {
 //    private Set<Product> products;
 
     @Transient
-    private Map<ua.hubanov.onlinestore_springboot.entity.Product, Integer> productsWithQuantity = new HashMap<>();
+    private Map<Product, Integer> productsWithQuantity = new HashMap<>();
 
     @JoinColumn(name = "order_id")
     @OneToMany(fetch = FetchType.EAGER)
-    private Set<ua.hubanov.onlinestore_springboot.entity.Order> orders;
+    private Set<Order> orders;
 
 //    @JoinColumn(name="user_id")
 //    @OneToOne(fetch = FetchType.EAGER)

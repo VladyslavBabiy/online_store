@@ -21,7 +21,7 @@ public class InCartProduct {
 
     @ManyToOne
     @JoinColumn(name = "product_id")
-    private ua.hubanov.onlinestore_springboot.entity.Product product;
+    private Product product;
 
     @Column(name = "needed_quantity")
     @Builder.Default
